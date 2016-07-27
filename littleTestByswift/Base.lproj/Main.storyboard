@@ -21,20 +21,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTP-3d-Ava">
-                                            <rect key="frame" x="14" y="22" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTP-3d-Ava">
+                                            <rect key="frame" x="14" y="22" width="90" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="A6N-11-8ew"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmL-lV-qId">
-                                            <rect key="frame" x="550" y="21" width="42" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmL-lV-qId">
+                                            <rect key="frame" x="474" y="21" width="118" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="118" id="I7y-Tz-nhj"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="eTP-3d-Ava" secondAttribute="bottom" constant="0.5" id="5Jt-xO-43M"/>
+                                        <constraint firstAttribute="bottom" secondItem="kmL-lV-qId" secondAttribute="bottom" constant="1.5" id="Sme-1b-RG5"/>
+                                        <constraint firstItem="eTP-3d-Ava" firstAttribute="leading" secondItem="K3z-Ks-obU" secondAttribute="leading" constant="14" id="jYf-yS-CFf"/>
+                                        <constraint firstAttribute="trailing" secondItem="kmL-lV-qId" secondAttribute="trailing" constant="8" id="wgS-gW-34h"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ageLabel" destination="kmL-lV-qId" id="GoI-oB-DY4"/>
+                                    <outlet property="nameLabel" destination="eTP-3d-Ava" id="Cvz-is-3yt"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

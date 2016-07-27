@@ -9,7 +9,14 @@
 import UIKit
 
 class testTableViewCell: UITableViewCell {
-
+    var model:testModel? {
+    didSet{
+    nameLabel.text = model?.name ?? "空"
+        ageLabel.text = model?.age ?? "kong"
+    }
+    }
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var ageLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

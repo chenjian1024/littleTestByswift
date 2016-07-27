@@ -20,4 +20,8 @@ class testModel: NSObject {
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
         
     }
+    
+    override var description: String{
+    return "\(name ?? "0")--\(age ?? "1")"
+    }
 }
