@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dWf-fW-oDh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PwN-zB-mvs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -15,7 +15,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="test" id="B4G-V4-uKs" customClass="testTableViewCell" customModule="littleTestByswift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B4G-V4-uKs" id="K3z-Ks-obU">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -50,6 +50,7 @@
                                 <connections>
                                     <outlet property="ageLabel" destination="kmL-lV-qId" id="GoI-oB-DY4"/>
                                     <outlet property="nameLabel" destination="eTP-3d-Ava" id="Cvz-is-3yt"/>
+                                    <segue destination="D0I-iw-SHI" kind="show" id="eFg-kt-8JB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -58,8 +59,78 @@
                             <outlet property="delegate" destination="dWf-fW-oDh" id="xJ5-eR-b4G"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="dzA-Uk-bI6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ea9-5v-HLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="276"/>
+        </scene>
+        <!--详情-->
+        <scene sceneID="7Os-ip-kYh">
+            <objects>
+                <viewController id="D0I-iw-SHI" customClass="detailController" customModule="littleTestByswift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wyv-4G-qdE"/>
+                        <viewControllerLayoutGuide type="bottom" id="DEr-5W-Rem"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dw8-Kz-jHd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e4F-HD-HHK">
+                                <rect key="frame" x="0.0" y="157" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cp-5a-kt3">
+                                <rect key="frame" x="0.0" y="111" width="600" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="e4F-HD-HHK" secondAttribute="trailing" id="1IP-fB-2cr"/>
+                            <constraint firstItem="e4F-HD-HHK" firstAttribute="top" secondItem="6cp-5a-kt3" secondAttribute="bottom" constant="16" id="Rus-MC-hoW"/>
+                            <constraint firstItem="6cp-5a-kt3" firstAttribute="top" secondItem="Wyv-4G-qdE" secondAttribute="bottom" constant="47" id="TXA-PE-0Ny"/>
+                            <constraint firstItem="6cp-5a-kt3" firstAttribute="leading" secondItem="dw8-Kz-jHd" secondAttribute="leading" id="j2w-2R-xJD"/>
+                            <constraint firstAttribute="trailing" secondItem="6cp-5a-kt3" secondAttribute="trailing" id="us7-tX-Zm9"/>
+                            <constraint firstItem="e4F-HD-HHK" firstAttribute="leading" secondItem="dw8-Kz-jHd" secondAttribute="leading" id="uvQ-81-8nZ"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="详情" id="c97-6v-LjN">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="Iq1-ag-ewn">
+                            <connections>
+                                <action selector="save:" destination="D0I-iw-SHI" id="9uh-yb-T6S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="ageTextFiled" destination="e4F-HD-HHK" id="oq8-iZ-WAW"/>
+                        <outlet property="nameTextFiled" destination="6cp-5a-kt3" id="p7y-cV-B3P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1bz-LI-Ou9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FZQ-72-kCP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PwN-zB-mvs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DjK-5V-K6n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dWf-fW-oDh" kind="relationship" relationship="rootViewController" id="r6p-y0-6Br"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5L4-9q-q4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="278" y="276"/>
         </scene>

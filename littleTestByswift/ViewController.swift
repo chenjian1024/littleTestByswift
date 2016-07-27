@@ -24,7 +24,15 @@ class ViewController: UITableViewController {
         
     }
    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let tarVC:detailController = segue.destinationViewController as! detailController
+        tarVC.model = cells![(tableView.indexPathForSelectedRow?.row)!]
+        tarVC.callBcack={()->() in
+            self.tableView.reloadData()
+        
+        }
+        //navigationController?.pushViewController(tarVC, animated: true)
+    }
    //MARK:数据源方法
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:testTableViewCell = tableView.dequeueReusableCellWithIdentifier("test", forIndexPath: indexPath) as! testTableViewCell
@@ -63,8 +71,8 @@ extension ViewController {
                 dict["age"] = age
                 arr.append(testModel(dict:dict))
             }
-            print(arr)
-            dispatch_sync(dispatch_get_main_queue(), { 
+//            print(arr)
+            dispatch_sync(dispatch_get_main_queue(), {
                 finlished(arr)
             })
         }

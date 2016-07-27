@@ -14,6 +14,7 @@
 		9C128B7B1D478D0800699515 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C128B791D478D0800699515 /* LaunchScreen.storyboard */; };
 		9C172C921D4841500046C3D4 /* testTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172C911D4841500046C3D4 /* testTableViewCell.swift */; };
 		9C172C941D48449D0046C3D4 /* testModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172C931D48449D0046C3D4 /* testModel.swift */; };
+		9C172C961D4857AC0046C3D4 /* detailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C172C951D4857AC0046C3D4 /* detailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9C128B7C1D478D0800699515 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C172C911D4841500046C3D4 /* testTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testTableViewCell.swift; sourceTree = "<group>"; };
 		9C172C931D48449D0046C3D4 /* testModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testModel.swift; sourceTree = "<group>"; };
+		9C172C951D4857AC0046C3D4 /* detailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9C128B7C1D478D0800699515 /* Info.plist */,
 				9C172C911D4841500046C3D4 /* testTableViewCell.swift */,
 				9C172C931D48449D0046C3D4 /* testModel.swift */,
+				9C172C951D4857AC0046C3D4 /* detailController.swift */,
 			);
 			path = littleTestByswift;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				9C128B731D478D0800699515 /* ViewController.swift in Sources */,
 				9C172C921D4841500046C3D4 /* testTableViewCell.swift in Sources */,
+				9C172C961D4857AC0046C3D4 /* detailController.swift in Sources */,
 				9C128B711D478D0800699515 /* AppDelegate.swift in Sources */,
 				9C172C941D48449D0046C3D4 /* testModel.swift in Sources */,
 			);
