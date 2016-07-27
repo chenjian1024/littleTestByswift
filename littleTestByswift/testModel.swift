@@ -9,5 +9,15 @@
 import UIKit
 
 class testModel: NSObject {
-var 
+    var name:String?
+    var age:String?
+    
+    init(dict:[String:AnyObject]) {
+        super.init()
+        setValuesForKeysWithDictionary(dict)
+    }
+    //MARK: 处理字典中出现模型中没有定义的key
+    override func setValue(value: AnyObject?, forUndefinedKey key: String) {
+        
+    }
 }
