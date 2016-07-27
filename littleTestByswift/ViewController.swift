@@ -10,7 +10,7 @@ import UIKit
 //继承自UItableViewController
 class ViewController: UITableViewController {
 
-    
+//    var cells:[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +19,15 @@ class ViewController: UITableViewController {
 
 //    数据源方法
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        <#code#>
+        let cell:testTableViewCell = tableView.dequeueReusableCellWithIdentifier("test", forIndexPath: indexPath) as! testTableViewCell
+        
+        return cell
     }
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        <#code#>
+        return 0 ;
     }
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 1;
     }
    
     override func didReceiveMemoryWarning() {
